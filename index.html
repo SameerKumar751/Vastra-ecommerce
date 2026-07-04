@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VASTRA — Adorning Culture, Weaving Heritage</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">VASTRA</div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#heritage">Heritage</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button id="searchToggle" aria-label="search">🔍</button>
+        <button id="cartBtn" aria-label="view cart">🛒 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+
+    <div id="searchBar" class="search-bar hidden container">
+      <input id="searchInput" placeholder="Search sarees, kurtas, jewelry..." />
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Adorning Culture, <span class="accent">Weaving Heritage</span></h1>
+      <p class="hero-sub">Handwoven sarees, artisanal kurtas, and timeless jewelry — rooted in Indian craft.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn btn-primary">Explore Now</a>
+        <a href="#heritage" class="btn btn-ghost">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections / Filters -->
+  <section id="shop" class="collections container">
+    <div class="collections-head">
+      <h2>New Arrivals</h2>
+      <div class="filters">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="saree">Sarees</option>
+          <option value="kurta">Kurtas</option>
+          <option value="jewelry">Jewelry</option>
+          <option value="footwear">Footwear</option>
+        </select>
+
+        <select id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="low">Price: Low → High</option>
+          <option value="high">Price: High → Low</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="productsGrid" class="products-grid">
+      <!-- Product cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- Cultural banners -->
+  <section class="banners container">
+    <div class="banner">
+      <h3>Banarasi Elegance</h3>
+      <p>Rich textures for festive moments</p>
+      <a href="#shop" class="btn btn-sm">Shop Banarasi</a>
+    </div>
+    <div class="banner">
+      <h3>Handwoven Heritage</h3>
+      <p>Slow fashion: crafted with love</p>
+      <a href="#shop" class="btn btn-sm">Explore</a>
+    </div>
+    <div class="banner">
+      <h3>Festive Specials</h3>
+      <p>Up to <strong>50% off</strong> selected picks</p>
+      <a href="#shop" class="btn btn-sm">View Offers</a>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div class="about">
+        <h4>About VASTRA</h4>
+        <p>VASTRA celebrates Indian textiles and craftsmanship — a curated collection that honors regional weaves & traditions.</p>
+      </div>
+
+      <div class="newsletter">
+        <h4>Newsletter</h4>
+        <p>Get new drops & exclusive offers.</p>
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Your email" required />
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="contact">
+        <h4>Contact</h4>
+        <p>Email: hello@vastra.example</p>
+        <p>Follow: Instagram • Facebook • Pinterest</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> VASTRA. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal -->
+  <div id="quickView" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeQuick">✕</button>
+      <div id="quickBody"></div>
+    </div>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <aside id="cartSidebar" class="cart-sidebar hidden" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
