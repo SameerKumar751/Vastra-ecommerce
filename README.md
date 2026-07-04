@@ -14,15 +14,15 @@ A responsive Indian fashion e-commerce website inspired by modern Indian fashion
 
 ### Home Page
 
-![Home](screenshots/home.png)
+![Home](home.png)
 
 ### Product Page
 
-![Product](screenshots/product.png)
+![Product](product.png)
 
 ### Shopping Cart
 
-![Cart](screenshots/cart.png)
+![Cart](cart.png)
 
 ---
 
